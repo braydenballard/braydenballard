@@ -1,0 +1,61 @@
+<!doctype html>
+<!--
+  Template for one issue page. Not published: Netlify only serves the site/ folder.
+  To post an approved issue: copy this file to site/news/issue-N.html, fill in the
+  {{placeholders}}, and add a matching <li> to the top of #issues in site/news/index.html.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{TITLE}} · The Allen Parish Post</title>
+<meta name="description" content="{{SUMMARY}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{SUMMARY}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">The Allen Parish <span>Post</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/news/" aria-current="page">News</a>
+      <a href="/advertise.html">Advertise</a>
+    </nav>
+  </div>
+</header>
+
+<main class="band">
+  <article class="wrap issue">
+    <p class="dateline"><span>Issue #{{NUMBER}}</span><span>{{DATE}}</span></p>
+    <h1>{{TITLE}}</h1>
+
+    {{BODY}}
+
+    <aside class="signup">
+      <h2 style="font-size:1.4rem">Get the next issue free</h2>
+      <form name="subscribe" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company">
+        <input type="hidden" name="form-name" value="subscribe">
+        <p class="hp"><label>Leave this empty <input id="sub-company" name="company" tabindex="-1" autocomplete="off"></label></p>
+        <label for="sub-email">Email address
+          <input id="sub-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+        </label>
+        <button class="btn" type="submit">Sign me up</button>
+      </form>
+    </aside>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© {{YEAR}} The Allen Parish Post · Made in Allen Parish, Louisiana</span>
+    <a href="/news/">All issues</a>
+  </div>
+</footer>
+</body>
+</html>

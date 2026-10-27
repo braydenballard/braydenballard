@@ -141,3 +141,22 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
 @media (max-width: 760px) {
   .hero, .sample, .two { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* news list + issue pages */
+.muted { color: var(--muted); }
+.issues { list-style: none; margin: 1rem 0 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.issues li { border-bottom: 1px solid var(--line); }
+.issues a { display: flex; flex-direction: column; gap: .3rem; padding-block: 1.1rem; text-decoration: none; }
+.issues a:hover h2 { text-decoration: underline; text-underline-offset: 4px; }
+.issues h2 { font-size: 1.4rem; }
+.issues p { color: var(--muted); }
+.empty-issues { display: flex; flex-direction: column; gap: .75rem; background: var(--surface); border: 1.5px dashed var(--line); border-radius: 6px; padding: 1.5rem; max-width: 36rem; }
+.issue { max-width: 44rem; display: flex; flex-direction: column; gap: 1.1rem; }
+.issue h2 { font-size: 1.6rem; margin-top: 1.2rem; }
+.issue ul, .issue ol { margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: .5rem; }
+.issue table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+.issue th, .issue td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--line); }
+.issue .src { font-size: .85rem; color: var(--muted); }
+.issue .sponsor { background: var(--gold-soft); border-radius: 6px; padding: 1rem 1.2rem; }
+.issue .sponsor::before { content: "Sponsor"; display: block; font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
+.issue .signup { margin-top: 1.5rem; }

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>News · The Allen Parish Post</title>
+<meta name="description" content="Every issue of The Allen Parish Post: local news from Elizabeth, Kinder, Oakdale, Oberlin and Reeves.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">The Allen Parish <span>Post</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/news/" aria-current="page">News</a>
+      <a href="/advertise.html">Advertise</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="band">
+    <div class="wrap stack">
+      <p class="label">News</p>
+      <h1>Every issue of the Post</h1>
+      <p class="lede">Each Thursday's issue is posted here after it goes out by email. Newest first.</p>
+
+      <!-- Add new issues at the top of this list. Copy an <li> and change the link, date, title and summary. -->
+      <ul class="issues" id="issues"></ul>
+
+      <div class="empty-issues" id="empty">
+        <h2 style="font-size:1.4rem">Issue #1 is on the way</h2>
+        <p class="muted">Sign up and it lands in your inbox Thursday morning.</p>
+        <a class="btn" href="/#subscribe" style="align-self:flex-start">Subscribe free</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> The Allen Parish Post · Made in Allen Parish, Louisiana</span>
+    <a href="/advertise.html">Advertise with us</a>
+  </div>
+</footer>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('empty').hidden = document.querySelectorAll('#issues li').length > 0;
+</script>
+</body>
+</html>
