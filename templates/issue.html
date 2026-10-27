@@ -2,7 +2,8 @@
 <!--
   Template for one issue page. Not published: Netlify only serves the site/ folder.
   To post an approved issue: copy this file to site/news/issue-N.html, fill in the
-  {{placeholders}}, and add a matching <li> to the top of #issues in site/news/index.html.
+  {{placeholders}}, add a matching <li> to the top of #issues in site/news/index.html,
+  and add the page's URL to site/sitemap.xml.
 -->
 <html lang="en">
 <head>
@@ -12,6 +13,8 @@
 <meta name="description" content="{{SUMMARY}}">
 <meta property="og:title" content="{{TITLE}}">
 <meta property="og:description" content="{{SUMMARY}}">
+<link rel="canonical" href="https://allenparishpost.netlify.app/news/issue-{{NUMBER}}.html">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
