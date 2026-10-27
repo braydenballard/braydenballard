@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thanks · The Allen Parish Post</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">The Allen Parish <span>Post</span></a>
+    <nav class="nav" aria-label="Main"><a href="/">Home</a><a href="/advertise.html">Advertise</a></nav>
+  </div>
+</header>
+<main class="band">
+  <div class="wrap stack" style="max-width:40rem">
+    <p class="label">Got it</p>
+    <h1 id="t-head">You're on the list.</h1>
+    <p class="lede" id="t-body">Your first issue arrives Thursday. Know a neighbor who'd like it? Send them to this site.</p>
+    <a class="btn" href="/" style="align-self:flex-start">Back to the Post</a>
+  </div>
+</main>
+<script>
+  if (location.search.includes('sponsor')) {
+    document.getElementById('t-head').textContent = 'Thanks! We got your message.';
+    document.getElementById('t-body').textContent = "We'll reply within one business day to confirm your package and dates.";
+  }
+</script>
+</body>
+</html>

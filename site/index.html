@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Allen Parish Post</title>
+<meta name="description" content="Everything happening in Allen Parish this week, in 5 minutes. A free weekly email covering Elizabeth, Kinder, Oakdale, Oberlin and Reeves.">
+<meta property="og:title" content="The Allen Parish Post">
+<meta property="og:description" content="Everything happening in Allen Parish this week, in 5 minutes. Free, every Thursday.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">The Allen Parish <span>Post</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/advertise.html">Advertise</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="band">
+    <div class="wrap hero">
+      <div class="stack">
+        <p class="dateline"><span>Allen Parish, Louisiana</span><span>Free every Thursday</span></p>
+        <h1>Everything happening in Allen Parish this week, in 5 minutes.</h1>
+        <p class="lede">One email instead of five Facebook groups. What's opening, what your leaders decided, Friday night scores and what's on this weekend.</p>
+        <ul class="towns" aria-label="Towns covered">
+          <li>Elizabeth</li><li>Kinder</li><li>Oakdale</li><li>Oberlin</li><li>Reeves</li>
+        </ul>
+      </div>
+
+      <div class="signup" id="subscribe">
+        <form name="subscribe" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="subscribe">
+          <p class="hp"><label>Leave this empty <input id="sub-company" name="company" tabindex="-1" autocomplete="off"></label></p>
+          <h2 style="font-size:1.5rem">Get it free every Thursday</h2>
+          <label for="sub-email">Email address
+            <input id="sub-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+          </label>
+          <label for="sub-town">Your town
+            <select id="sub-town" name="town">
+              <option value="">Pick one (optional)</option>
+              <option>Elizabeth</option><option>Kinder</option><option>Oakdale</option>
+              <option>Oberlin</option><option>Reeves</option><option>Somewhere else</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">Sign me up</button>
+          <p class="fine">Free. No spam. Unsubscribe with one click.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-surface">
+    <div class="wrap">
+      <p class="label">Inside every issue</p>
+      <h2>The same eight sections, every week</h2>
+      <div class="sections">
+        <div><h3>Top story</h3><p>The one thing everyone will be talking about this week.</p></div>
+        <div><h3>Quick hits</h3><p>Short news items from across all five towns.</p></div>
+        <div><h3>What your leaders decided</h3><p>Council, police jury and school board votes in plain English.</p></div>
+        <div><h3>Open &amp; coming soon</h3><p>New businesses, permits and construction.</p></div>
+        <div><h3>Friday night &amp; weekend</h3><p>High school scores, matchups and local events.</p></div>
+        <div><h3>Local jobs</h3><p>Who's hiring around the parish.</p></div>
+        <div><h3>One more thing</h3><p>A bit of local history, an old photo or a fun fact.</p></div>
+        <div><h3>Your tips</h3><p>Reply to any issue with news, birthdays or shoutouts.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-pine">
+    <div class="wrap sample">
+      <div class="stack">
+        <p class="label">A taste of Issue #1</p>
+        <h2>The news that never makes the TV station</h2>
+        <p class="lede">Public notices, water district updates, new businesses and council votes get turned into a few plain sentences, each with a link to the source.</p>
+        <a class="btn" href="#subscribe" style="align-self:flex-start">Get the next issue</a>
+      </div>
+      <article class="clip">
+        <h3>West Allen water customers, read this</h3>
+        <ul>
+          <li><b>Paperless billing is here.</b> The district now offers e-Bill, so your bill can come by email instead of mail.</li>
+          <li><b>Boil advisory lifted.</b> The Hwy 113 advisory north of Bel Fire Tower Road was lifted Oct. 23.</li>
+          <li><b>Next board meeting:</b> Tuesday, Nov. 10 at 6 p.m.</li>
+        </ul>
+        <p class="src">Source: <a href="https://westallenwater.myruralwater.com/recent-news" rel="noopener" target="_blank">West Allen Parish Water District</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap two">
+      <div class="stack">
+        <p class="label">For local businesses</p>
+        <h2>Reach your neighbors every Thursday</h2>
+      </div>
+      <div class="stack">
+        <p class="lede">Sponsor spots start at $25. Your business shows up in the inbox of people who live and shop in Allen Parish, next to news they actually read.</p>
+        <a class="btn btn-quiet" href="/advertise.html" style="align-self:flex-start">See sponsor packages</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> The Allen Parish Post · Made in Allen Parish, Louisiana</span>
+    <a href="/advertise.html">Advertise with us</a>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

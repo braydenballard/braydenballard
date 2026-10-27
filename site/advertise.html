@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Advertise · The Allen Parish Post</title>
+<meta name="description" content="Sponsor The Allen Parish Post and reach Allen Parish residents every Thursday. Spots start at $25.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">The Allen Parish <span>Post</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/advertise.html" aria-current="page">Advertise</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="band">
+    <div class="wrap stack">
+      <p class="label">Sponsor the Post</p>
+      <h1>Put your business in front of Allen Parish every Thursday</h1>
+      <p class="lede">The Post goes to residents of Elizabeth, Kinder, Oakdale, Oberlin and Reeves. Sponsor messages are short, clearly labeled and written in a neighborly voice, so people read them.</p>
+    </div>
+  </section>
+
+  <section class="band band-surface">
+    <div class="wrap">
+      <p class="label">Founding sponsor rates</p>
+      <h2>Pick a package</h2>
+      <div class="rates">
+        <div class="rate">
+          <h3>Spot ad</h3>
+          <p class="price">$25 <small>/ issue</small></p>
+          <ul>
+            <li>One sponsor message in one issue</li>
+            <li>Your logo, 2–3 sentences and a link</li>
+            <li>Good for a sale, an event or a grand opening</li>
+          </ul>
+          <a class="btn" data-pkg="spot" href="#book">Book a spot</a>
+        </div>
+        <div class="rate featured">
+          <span class="tag">Most popular</span>
+          <h3>Monthly sponsor</h3>
+          <p class="price">$80 <small>/ month</small></p>
+          <ul>
+            <li>Top sponsor spot in all 4 issues that month</li>
+            <li>A shoutout on our Facebook page</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a class="btn" data-pkg="monthly" href="#book">Become a sponsor</a>
+        </div>
+        <div class="rate">
+          <h3>Presenting sponsor</h3>
+          <p class="price">$150 <small>/ month</small></p>
+          <ul>
+            <li>"Brought to you by" naming on one section, like Friday Night Scores</li>
+            <li>Only one business per section</li>
+            <li>Includes everything in Monthly</li>
+          </ul>
+          <a class="btn" data-pkg="presenting" href="#book">Claim a section</a>
+        </div>
+        <div class="rate">
+          <h3>Job or event listing</h3>
+          <p class="price">$10 <small>/ issue</small></p>
+          <ul>
+            <li>One line in the local jobs or events list</li>
+            <li>Hiring? Holding a fundraiser? This is it.</li>
+          </ul>
+          <a class="btn" data-pkg="listing" href="#book">Add a listing</a>
+        </div>
+      </div>
+      <p class="fine" style="margin-top:1rem">Founding rates are for our first sponsors while the newsletter grows.</p>
+    </div>
+  </section>
+
+  <section class="band" id="book">
+    <div class="wrap two">
+      <div class="stack">
+        <p class="label">Book or ask a question</p>
+        <h2>Tell us about your business</h2>
+        <ul class="checks">
+          <li>We'll reply within one business day to confirm your dates.</li>
+          <li>Send your logo and message, or we'll write it with you for free.</li>
+          <li>Pay online by card, or in person if you prefer.</li>
+        </ul>
+      </div>
+      <div class="signup">
+        <form name="sponsor" method="POST" action="/thanks.html?sponsor" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="sponsor">
+          <p class="hp"><label>Leave this empty <input id="sp-company" name="company" tabindex="-1" autocomplete="off"></label></p>
+          <label for="sp-business">Business name
+            <input id="sp-business" name="business" required autocomplete="organization">
+          </label>
+          <label for="sp-name">Your name
+            <input id="sp-name" name="name" required autocomplete="name">
+          </label>
+          <label for="sp-contact">Phone or email
+            <input id="sp-contact" name="contact" required>
+          </label>
+          <label for="sp-package">Package
+            <select id="sp-package" name="package">
+              <option value="spot">Spot ad: $25 per issue</option>
+              <option value="monthly">Monthly sponsor: $80 per month</option>
+              <option value="presenting">Presenting sponsor: $150 per month</option>
+              <option value="listing">Job or event listing: $10 per issue</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </label>
+          <label for="sp-msg">Anything else? (optional)
+            <textarea id="sp-msg" name="message" placeholder="Dates you want, what you're promoting, questions"></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> The Allen Parish Post · Made in Allen Parish, Louisiana</span>
+    <a href="/#subscribe">Subscribe free</a>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
